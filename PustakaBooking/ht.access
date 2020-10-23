@@ -1,0 +1,5 @@
+RewriteEngine on
+RewriteCond $S1 !^(index\.php|assests|image|resource|robots\.txt)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(/*)$ index.php?/$1 [L,QSA]
